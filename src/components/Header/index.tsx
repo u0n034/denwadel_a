@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from './Navbar';
-import { Hero } from './Hero';
+import Hero from './Hero';
 
 export const Header = () => {
   return (
@@ -8,23 +8,11 @@ export const Header = () => {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/call-center-team.jpg"
-          alt="コールセンタースタッフ"
+          src="/images/noto.jpg"
+          alt="能登の風景"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/20" />
-      </div>
-
-      {/* Yellow overlay with clip-path */}
-      <div className="absolute inset-0 z-10">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#FFB800',
-            clipPath: 'polygon(0 0, 65% 0, 15% 100%, 0 100%)',
-            opacity: '0.95'
-          }}
-        />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}

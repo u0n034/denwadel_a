@@ -10,7 +10,7 @@ export const PainPoints: React.FC = () => {
         <div className="container mx-auto px-4">
           <SectionHeader 
             englishTitle="PROBLEM"
-            japaneseTitle="電話対応でこんなお困りありませんか？"
+            japaneseTitle="電話対応における3つの課題"
           />
           <div className="max-w-5xl mx-auto">
             <PainPointsList />

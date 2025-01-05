@@ -6,7 +6,7 @@ export const Features = () => {
   const features = [
     {
       icon: Phone,
-      title: "電話対応でこんなお困りありませんか？",
+      title: "電話対応における3つの課題",
       description: "24時間対応が必要"
     },
     {

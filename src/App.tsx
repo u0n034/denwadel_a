@@ -1,5 +1,7 @@
 import React from 'react';
 import { Header } from './components/Header';
+import Mission from './components/Mission';
+import { ValueProposition } from './components/ValueProposition';
 import { PainPoints } from './components/PainPoints';
 import { Solution } from './components/Solution';
 import { Features } from './components/Features';
@@ -18,6 +20,8 @@ function App() {
   return (
     <div className="min-h-screen">
       <Header />
+      <Mission />
+      <ValueProposition />
       <PainPoints />
       <Solution />
       <Features />
