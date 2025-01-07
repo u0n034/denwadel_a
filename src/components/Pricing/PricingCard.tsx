@@ -1,7 +1,6 @@
 import React from 'react';
 import { PricingHeader } from './PricingHeader';
 import { PricingFeatures } from './PricingFeatures';
-import { AdditionalPricing } from './AdditionalPricing';
 
 export const PricingCard = () => {
   return (
@@ -10,7 +9,6 @@ export const PricingCard = () => {
         <PricingHeader />
         <div className="p-8">
           <PricingFeatures />
-          <AdditionalPricing />
         </div>
       </div>
     </div>
