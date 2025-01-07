@@ -15,6 +15,11 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="relative z-10"
           >
+            <img 
+              src="/images/noto-support-logo.png" 
+              alt="能登半島地震復興支援" 
+              className="w-48 h-48 mb-4 mx-auto lg:mx-0"
+            />
             <h1 className="text-[48px] leading-tight font-bold text-white mb-4">
               能登で対応！<br />
               <span className="text-yellow-400">温かい電話代行サービス</span>
