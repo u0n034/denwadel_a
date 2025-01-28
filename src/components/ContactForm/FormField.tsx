@@ -10,6 +10,8 @@ interface FormFieldProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   error?: string;
   disabled?: boolean;
+  nameSei?: string;
+  nameMei?: string;
 }
 
 export const FormField: React.FC<FormFieldProps> = ({
@@ -21,7 +23,9 @@ export const FormField: React.FC<FormFieldProps> = ({
   value,
   onChange,
   error,
-  disabled
+  disabled,
+  nameSei,
+  nameMei
 }) => {
   const commonClasses = `w-full rounded-lg border-gray-300 bg-gray-50 
     focus:bg-white focus:border-yellow-500 focus:ring-yellow-500 transition-colors
@@ -47,7 +51,7 @@ export const FormField: React.FC<FormFieldProps> = ({
               placeholder="姓"
               className={commonClasses}
               required={required}
-              value={value?.split(' ')[0] || ''}
+              value={nameSei || ''}
               onChange={onChange}
               disabled={disabled}
             />
@@ -60,7 +64,7 @@ export const FormField: React.FC<FormFieldProps> = ({
               placeholder="名"
               className={commonClasses}
               required={required}
-              value={value?.split(' ')[1] || ''}
+              value={nameMei || ''}
               onChange={onChange}
               disabled={disabled}
             />

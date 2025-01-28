@@ -53,6 +53,8 @@ export const InquiryForm = () => {
         required
         error={errors.nameSei || errors.nameMei}
         disabled={isSubmitting}
+        nameSei={formData.nameSei}
+        nameMei={formData.nameMei}
       />
 
       <FormField
