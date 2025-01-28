@@ -49,6 +49,7 @@ export const ApplicationForm = () => {
         disabled={isSubmitting}
         nameSei={formData.nameSei}
         nameMei={formData.nameMei}
+        onChange={handleChange}
       />
 
       <FormField

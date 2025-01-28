@@ -16,14 +16,7 @@ export const InquiryForm = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    if (name === 'nameSei' || name === 'nameMei') {
-      setFormData(prev => ({
-        ...prev,
-        [name]: value
-      }));
-    } else {
-      setFormData(prev => ({ ...prev, [name]: value }));
-    }
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -55,6 +48,7 @@ export const InquiryForm = () => {
         disabled={isSubmitting}
         nameSei={formData.nameSei}
         nameMei={formData.nameMei}
+        onChange={handleChange}
       />
 
       <FormField
