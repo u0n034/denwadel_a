@@ -3,7 +3,7 @@ import { useEmailJS } from './useEmailJS';
 import { useNavigate } from 'react-router-dom';
 
 interface FormData {
-  company?: string;
+  company: string;
   nameSei: string;
   nameMei: string;
   phone: string;
@@ -12,6 +12,7 @@ interface FormData {
 }
 
 interface FormErrors {
+  company?: string;
   nameSei?: string;
   nameMei?: string;
   phone?: string;
@@ -35,6 +36,7 @@ export const useContactForm = (type: 'document' | 'inquiry' | 'application') => 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
+    if (!formData.company) newErrors.company = '会社名を入力してください';
     if (!formData.nameSei) newErrors.nameSei = '姓を入力してください';
     if (!formData.nameMei) newErrors.nameMei = '名を入力してください';
     if (!formData.phone) {

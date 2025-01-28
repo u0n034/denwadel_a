@@ -35,6 +35,8 @@ export const DocumentForm = () => {
         value={formData.company}
         onChange={handleChange}
         disabled={isSubmitting}
+        required
+        error={errors.company}
       />
 
       <FormField

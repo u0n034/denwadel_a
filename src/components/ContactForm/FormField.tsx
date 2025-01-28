@@ -43,11 +43,11 @@ export const FormField: React.FC<FormFieldProps> = ({
           <div>
             <input
               type="text"
-              name={`${name}-sei`}
+              name="nameSei"
               placeholder="姓"
               className={commonClasses}
               required={required}
-              value={value}
+              value={value?.split(' ')[0] || ''}
               onChange={onChange}
               disabled={disabled}
             />
@@ -56,11 +56,11 @@ export const FormField: React.FC<FormFieldProps> = ({
           <div>
             <input
               type="text"
-              name={`${name}-mei`}
+              name="nameMei"
               placeholder="名"
               className={commonClasses}
               required={required}
-              value={value}
+              value={value?.split(' ')[1] || ''}
               onChange={onChange}
               disabled={disabled}
             />
