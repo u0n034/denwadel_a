@@ -82,8 +82,8 @@ export const Thanks = () => {
         <div className="mt-8 text-center text-sm text-gray-500">
           <p>
             ご不明な点がございましたら、
-            <a href="tel:0120-xxx-xxx" className="text-yellow-500 hover:text-yellow-600">
-              0120-xxx-xxx
+            <a href="tel:0767-58-5858" className="text-yellow-500 hover:text-yellow-600">
+              0767-58-5858
             </a>
             までお問い合わせください。
           </p>
