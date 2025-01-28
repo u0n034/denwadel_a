@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { useEmailJS } from './useEmailJS';
+import { useNavigate } from 'react-router-dom';
 
 interface FormData {
   company?: string;
@@ -19,6 +20,7 @@ interface FormErrors {
 
 export const useContactForm = (type: 'document' | 'inquiry' | 'application') => {
   const { sendEmail, isSending } = useEmailJS();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     company: '',
     nameSei: '',
@@ -70,7 +72,6 @@ export const useContactForm = (type: 'document' | 'inquiry' | 'application') => 
         message: formData.message
       });
       
-      alert('送信が完了しました');
       setFormData({
         company: '',
         nameSei: '',
@@ -80,6 +81,8 @@ export const useContactForm = (type: 'document' | 'inquiry' | 'application') => 
         message: ''
       });
       setIsPrivacyAccepted(false);
+
+      navigate(`/thanks?type=${type}`);
     } catch (error) {
       alert('送信に失敗しました。時間をおいて再度お試しください。');
     }
